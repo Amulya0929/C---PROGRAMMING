@@ -1,0 +1,28 @@
+// early binding
+#include<iostream>
+using namespace std;
+class Base
+{
+    public:
+    void show()
+    {
+        cout<<"In Base\n"<<endl;
+    }
+};
+class derived : public Base
+{
+    public:
+    void show()
+    {
+        cout<<"In derived\n"<<endl;
+    }
+};
+int main(void)
+{
+  Base*bp = new derived;
+  bp -> show();
+  return 0;
+}
+
+
+
